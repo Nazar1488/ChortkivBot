@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChortkivBot.Core", "Chortki
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChortkivBot.Routes", "ChortkivBot.Routes\ChortkivBot.Routes.csproj", "{8902AADE-BB49-4DC3-B6D0-5EA8BFEA1571}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChortkivBot.Services", "ChortkivBot.Services\ChortkivBot.Services.csproj", "{98DC0BDF-5D85-4D6A-8208-A493448712B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChortkivBot.Contracts", "ChortkivBot.Contracts\ChortkivBot.Contracts.csproj", "{D20A74C5-A1DC-47AD-A0B0-FC6664865081}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{8902AADE-BB49-4DC3-B6D0-5EA8BFEA1571}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8902AADE-BB49-4DC3-B6D0-5EA8BFEA1571}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8902AADE-BB49-4DC3-B6D0-5EA8BFEA1571}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98DC0BDF-5D85-4D6A-8208-A493448712B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98DC0BDF-5D85-4D6A-8208-A493448712B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98DC0BDF-5D85-4D6A-8208-A493448712B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98DC0BDF-5D85-4D6A-8208-A493448712B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D20A74C5-A1DC-47AD-A0B0-FC6664865081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20A74C5-A1DC-47AD-A0B0-FC6664865081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20A74C5-A1DC-47AD-A0B0-FC6664865081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D20A74C5-A1DC-47AD-A0B0-FC6664865081}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,5 +11,7 @@ namespace ChortkivBot.Contracts.Services
         Task<Rout> GetRoutById(long id);
         Task<IEnumerable<StopInfo>> GetStopInfo(long id);
         Task<Bus> GetBusById(long routId, long busId);
+        Task<long?> GetRoutIdByName(string name);
+        Task<long?> GetStopId(long routId, string name);
     }
 }

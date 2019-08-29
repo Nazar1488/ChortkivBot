@@ -55,6 +55,19 @@ namespace ChortkivBot.Routes.Services
             return routes.FirstOrDefault(r => r.Id == id);
         }
 
+        public async Task<long?> GetRoutIdByName(string name)
+        {
+            var routes = await GetAvailableRoutes();
+            return routes.FirstOrDefault(r => r.Names.Contains(name))?.Id;
+        }
+
+        public async Task<long?> GetStopId(long routId, string name)
+        {
+            var stops = await GetRoutStops(routId);
+            var stop = stops.FirstOrDefault(s => s.Names.Contains(name));
+            return stop?.Id;
+        }
+
         public async Task<IEnumerable<StopInfo>> GetStopInfo(long id)
         {
             var headers = new WebHeaderCollection

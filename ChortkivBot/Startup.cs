@@ -3,6 +3,7 @@
 //
 // Generated with Bot Builder V4 SDK Template for Visual Studio MainBot v4.5.0
 
+using System.Collections.Concurrent;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -17,6 +18,7 @@ using ChortkivBot.Core.Configuration;
 using ChortkivBot.Dialogs;
 using ChortkivBot.Routes.Services;
 using ChortkivBot.Services.Http;
+using Microsoft.Bot.Schema;
 
 namespace ChortkivBot
 {
@@ -46,6 +48,8 @@ namespace ChortkivBot
 
             // Create the Conversation state. (Used by the Dialog system itself.)
             services.AddSingleton<ConversationState>();
+
+            services.AddSingleton<ConcurrentDictionary<string, ConversationReference>>();
 
             services.AddSingleton<MainDialog>();
             services.AddSingleton<RoutDialog>();

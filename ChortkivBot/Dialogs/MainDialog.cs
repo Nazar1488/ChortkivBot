@@ -45,7 +45,7 @@ namespace ChortkivBot.Dialogs
             {
                 case "/start":
                     card.Text =
-                        "Привіт \U0001F44B! Я бот міста Чорткова \U0001F60E. Чим можу допомогти? \U0001F440";
+                        $"Привіт \U0001F44B! Я бот міста Чорткова \U0001F60E. Чим можу допомогти? \U0001F440";
                     card.Images = new List<CardImage>
                     {
                         new CardImage

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Bot.Builder;
@@ -9,8 +10,8 @@ namespace ChortkivBot.Bots
 {
     public class Bot<T> : MainBot<T> where T : Dialog
     {
-        public Bot(ConversationState conversationState, UserState userState, T dialog)
-            : base(conversationState, userState, dialog)
+        public Bot(ConversationState conversationState, UserState userState, T dialog, ConcurrentDictionary<string, ConversationReference> conversationReferences)
+            : base(conversationState, userState, dialog, conversationReferences)
         {
         }
 

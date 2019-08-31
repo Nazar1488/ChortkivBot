@@ -123,7 +123,7 @@ namespace ChortkivBot.Dialogs
                 await stepContext.Context.SendActivityAsync(MessageFactory.SuggestedActions(new List<CardAction>(), reply),
                     cancellationToken);
 
-                return await stepContext.BeginDialogAsync(nameof(MainDialog), null, cancellationToken);
+                return await stepContext.ReplaceDialogAsync(nameof(MainDialog), null, cancellationToken);
             }
 
             await stepContext.Context.SendActivityAsync(MessageFactory.Text("Щось пішло не так \U0001F613. Спробуй ще раз \U0001F609"),

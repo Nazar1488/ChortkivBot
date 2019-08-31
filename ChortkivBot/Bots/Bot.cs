@@ -26,13 +26,14 @@ namespace ChortkivBot.Bots
                 {
                     var card = new HeroCard
                     {
-                        Text = $"Привіт \U0001F44B, {member.Name}! Я бот міста Чорткова \U0001F60E. Чим можу допомогти? \U0001F440",
+                        Text = $"Привіт \U0001F44B, {member.Name}! Я бот міста Чорткова \U0001F60E.\n\nЧим можу допомогти? \U0001F440",
                         Buttons = new List<CardAction>
                         {
                             // Note that some channels require different values to be used in order to get buttons to display text.
                             // In this code the emulator is accounted for with the 'title' parameter, but in other channels you may
                             // need to provide a value for other parameters like 'text' or 'displayText'.
                             new CardAction(ActionTypes.ImBack, "\U0001F68D Маршрутки", value: "/routes"),
+                            new CardAction(ActionTypes.ImBack, "\U0001F698 Як доїхати?", value: "/travel"),
                             new CardAction(ActionTypes.ImBack, "\U0001F4F0 Новини", value: "/news"),
                             new CardAction(ActionTypes.ImBack, "\U0001F4E2 Події", value: "/events")
                         },

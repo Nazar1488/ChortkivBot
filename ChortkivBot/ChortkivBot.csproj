@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <LangVersion>latest</LangVersion>
+    <UserSecretsId>8c97055c-037a-443e-8d62-c78a14966190</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ChortkivBot.Routes\ChortkivBot.Routes.csproj" />
     <ProjectReference Include="..\ChortkivBot.Services\ChortkivBot.Services.csproj" />
+    <ProjectReference Include="..\ChortkivBot.Travel\ChortkivBot.Travel.csproj" />
   </ItemGroup>
 
     <ItemGroup>

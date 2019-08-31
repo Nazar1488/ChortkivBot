@@ -13,11 +13,15 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 using ChortkivBot.Bots;
+using ChortkivBot.Contracts.Helpers;
 using ChortkivBot.Contracts.Services;
 using ChortkivBot.Core.Configuration;
 using ChortkivBot.Dialogs;
 using ChortkivBot.Routes.Services;
 using ChortkivBot.Services.Http;
+using ChortkivBot.Travel.BlaBlaCar;
+using ChortkivBot.Travel.Bus;
+using ChortkivBot.Travel.Helpers;
 using Microsoft.Bot.Schema;
 
 namespace ChortkivBot
@@ -37,6 +41,8 @@ namespace ChortkivBot
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.Configure<RoutConfig>(options => Configuration.GetSection("RoutConfig").Bind(options));
+            services.Configure<BusConfig>(options => Configuration.GetSection("BusConfig").Bind(options));
+            services.Configure<BlaBlaCarConfig>(options => Configuration.GetSection("BlaBlaCarConfig").Bind(options));
 
             // Create the Bot Framework Adapter with error handling enabled.
             services.AddSingleton<IBotFrameworkHttpAdapter, AdapterWithErrorHandler>();
@@ -53,12 +59,18 @@ namespace ChortkivBot
 
             services.AddSingleton<MainDialog>();
             services.AddSingleton<RoutDialog>();
+            services.AddSingleton<TravelDialog>();
 
             // Create the bot as a transient. In this case the ASP Controller is expecting an IBot.
             services.AddTransient<IBot, Bot<MainDialog>>();
 
+            services.AddTransient<BusFinder>();
+            services.AddTransient<BlaBlaCarFinder>();
+
             services.AddTransient<IHttpService, HttpService>();
             services.AddTransient<IRoutService, RoutService>();
+            services.AddTransient<IDateFormatter, DateFormatter>();
+            services.AddTransient<ILinkBuilder, LinkBuilder>();
 
             services.AddMemoryCache();
         }

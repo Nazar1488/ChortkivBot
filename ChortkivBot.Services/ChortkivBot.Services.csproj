@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Google.Cloud.Dialogflow.V2" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ChortkivBot.Contracts\ChortkivBot.Contracts.csproj" />
   </ItemGroup>
 

@@ -17,7 +17,7 @@ namespace ChortkivBot.Dialogs
         public MainDialog(UserState userState, IRoutService routService, BusFinder busFinder, BlaBlaCarFinder blaBlaCarFinder)
             : base(nameof(MainDialog))
         {
-            this.userState = userState;
+            this.userState = userState; 
 
             AddDialog(new TravelDialog(busFinder, blaBlaCarFinder));
             AddDialog(new RoutDialog(routService));

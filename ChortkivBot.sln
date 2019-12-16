@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.645
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChortkivBot", "ChortkivBot\ChortkivBot.csproj", "{B237BF0F-CC02-4431-98A7-AC34DAFE08CE}"
 EndProject
@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChortkivBot.Services", "Cho
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChortkivBot.Contracts", "ChortkivBot.Contracts\ChortkivBot.Contracts.csproj", "{D20A74C5-A1DC-47AD-A0B0-FC6664865081}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChortkivBot.Travel", "ChortkivBot.Travel\ChortkivBot.Travel.csproj", "{87DB1534-D702-415C-8CD5-1A9B2447B020}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChortkivBot.Travel", "ChortkivBot.Travel\ChortkivBot.Travel.csproj", "{87DB1534-D702-415C-8CD5-1A9B2447B020}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChortkivBot.Telegram", "ChortkivBot.Telegram\ChortkivBot.Telegram.csproj", "{6FD38888-4917-4D0B-ABD9-47A996FBF588}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{87DB1534-D702-415C-8CD5-1A9B2447B020}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87DB1534-D702-415C-8CD5-1A9B2447B020}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87DB1534-D702-415C-8CD5-1A9B2447B020}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FD38888-4917-4D0B-ABD9-47A996FBF588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FD38888-4917-4D0B-ABD9-47A996FBF588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FD38888-4917-4D0B-ABD9-47A996FBF588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FD38888-4917-4D0B-ABD9-47A996FBF588}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

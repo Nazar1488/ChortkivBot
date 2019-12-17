@@ -48,10 +48,11 @@ namespace ChortkivBot.Telegram.Dialogs
         public async void StartDialog(DetectIntentResponse response, Chat chat)
         {
             var original = response.QueryResult.Parameters.Fields["original"];
-            var userName = response.QueryResult.OutputContexts[0].Parameters.Fields["userName"];
+            var userNameField = response.QueryResult.OutputContexts.FirstOrDefault(s => s.Parameters.Fields.ContainsKey("userName"));
+            var userName = userNameField?.Parameters.Fields["userName"];
             if (string.IsNullOrEmpty(original.StringValue))
             {
-
+                return;
             }
 
             var destination = response.QueryResult.Parameters.Fields["destination"];
